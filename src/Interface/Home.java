@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interface;
-
+import java.sql.Connection;
 /**
  *
  * @author Jatin Singh Tanwar
@@ -14,9 +14,11 @@ public class Home extends javax.swing.JFrame {
      * Creates new form Home
      */
     int x,y;
+    Connection con;
     
     public Home() {
         initComponents();
+        con = DBConnection.connect();
         jDesktopPane1.removeAll();
         Main ma= new Main();
         jDesktopPane1.add(ma).setVisible(true);
